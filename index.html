@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background changer</title>
+    <style>
+        body{
+            text-align: center;
+            margin:20px
+        }
+        .colOption{
+            display: flex;
+            justify-content: center;
+        }
+        .item{
+            margin:10px;
+            border:1px solid black;
+            width:15px;
+            height:15px;
+            border-radius: 50%;
+            padding:10px;
+            text-align: right;
+        }
+        #red{
+           background-color: #be4d25 ;
+        }
+        #blue{
+           background-color: #2596be;
+
+        }
+        #pink{
+           background-color: #ff66ff;
+        }
+        #green{
+           background-color: #49be25;
+        }
+        .div{
+            width:70vw;
+            text-align: justify;
+            column-width: 3000px;
+            column-count: 2;
+            column-gap: 10px;
+            
+        }
+        img{
+            width:70vw;
+            height: 40vh;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="colOption" id="colors">
+        <span class="item" id="red" onclick="changebg('#be4d25')" onmouseover="seechange('#be4d25')" onmouseout="removechange()"></span>
+        <span class="item" id="blue" onclick="changebg('#2596be')" onmouseover="seechange('#2596be')" onmouseout="removechange()"></span>
+        <span class="item"  id= "pink" onclick="changebg('#ff66ff')" onmouseover="seechange('#ff66ff')" onmouseout="removechange()"></span>
+        <span class="item" id="green" onclick="changebg('#49be25')" onmouseover="seechange('#49be25')" onmouseout="removechange()"></span>
+    </div>
+    <center>
+    <h1>Background Changer page</h1>
+    <img src="https://source.unsplash.com/random/flower">
+    <div class="div">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo reiciendis necessitatibus alias amet itaque iste inventore tenetur unde at nostrum, sunt, sed laborum tempora voluptas placeat quos voluptates repudiandae. Quod ratione exercitationem et reiciendis tempore laboriosam dolore sunt! Impedit, ea, explicabo amet ducimus quibusdam soluta sequi dolores totam alias adipisci nulla error aspernatur voluptatibus sint ullam laborum quae pariatur eum autem, ut non dicta nam aperiam? Optio placeat voluptate, earum doloribus reiciendis soluta illum quia magnam autem, nobis, voluptates repellendus. Deleniti minus repellendus similique at sint enim dignissimos fuga ut cupiditate possimus ullam, non, sapiente recusandae illo rerum? Soluta?Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita debitis quaerat earum tempore? Eos facilis consequatur vero doloribus earum unde exercitationem sunt! Eius mollitia a expedita error at repudiandae, ea maiores et velit aspernatur quos vero, veritatis ex voluptatum iste. Laborum, reprehenderit minus! Deleniti id atque magnam recusandae, quidem libero quibusdam beatae distinctio voluptatem facilis corrupti praesentium magni vel quisquam blanditiis quo. Consequuntur perferendis qui porro. Dolorum saepe quis unde autem nam rerum sequi, blanditiis cumque corrupti veniam voluptas reiciendis tenetur a minima voluptatum obcaecati facilis architecto rem iusto odit necessitatibus officiis! Consequuntur, alias. Eaque quam tempore quos eius amet!lorem100
+
+    </div>
+</center>
+
+
+    <script>
+        var clicked=false;
+        function changebg(col){
+            document.body.style.backgroundColor=col;
+            clicked=true;
+        }
+        function seechange(col){
+            clicked=false;
+            document.body.style.backgroundColor=col;
+        }
+        function removechange(col){
+            if(!clicked){
+            document.body.style.backgroundColor='white';}
+        }
+    </script>
+</body>
+</html>
